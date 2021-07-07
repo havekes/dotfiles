@@ -2,6 +2,8 @@
 
 set -e
 
+git pull origin main
+
 # Choose config depending on OS
 if [ $(uname -s) == Darwin ]; then
     CONFIG="config/macos.yaml"
