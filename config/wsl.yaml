@@ -1,0 +1,18 @@
+- clean: []
+- link:
+    ~/.zshrc:
+      path: shell/zshrc
+      force: true
+    ~/.oh-my-zsh/themes/greg.zsh-theme:
+      path: shell/greg.zsh-theme
+      force: true
+    ~/.gitconfig:
+      path: git/.gitconfig
+      force: true
+- shell:
+    - command: git submodule sync --recursive
+      description: Synchronize Git submodules
+    - command: chsh -s /bin/zsh
+      description: Change default shell to zsh
+    - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
+      description: Install VSCodium dependencies

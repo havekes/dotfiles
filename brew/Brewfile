@@ -1,0 +1,21 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Improved top (interactive process viewer)
+brew "htop"
+# Platform built on V8 to build network applications
+brew "node"
+# Version control system designed to be a better CVS
+brew "subversion"
+cask "font-fira-code"
+# Binary releases of VS Code without MS branding/telemetry/licensing
+cask "vscodium"
