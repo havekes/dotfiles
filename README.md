@@ -13,6 +13,7 @@ Just run the install script.
 When using WSL, the script can only configure software running inside WSL.
 
 Start by installing
+
 - [VSCodium](https://github.com/VSCodium/vscodium)
 - Windows Terminal (from the Microsoft Store)
 
@@ -27,3 +28,8 @@ Then run the scripts for Windows and for WSL.
 # From WSL
 ./install.sh
 ```
+
+## TODO
+
+- Fira Code
+- Arch setup

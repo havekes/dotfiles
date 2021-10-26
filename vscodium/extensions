@@ -14,10 +14,12 @@ esbenp.prettier-vscode
 golang.go
 Gruntfuggly.todo-tree
 heybourn.headwind
+mikestead.dotenv
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 octref.vetur
 streetsidesoftware.code-spell-checker
 vscodevim.vim
+wix.vscode-import-cost
 yzhang.markdown-all-in-one

@@ -1,19 +1,18 @@
 {
   // Computer dependent
-  "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 14,
-
-  "editor.fontFamily": "'FiraCode-Retina', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "terminal.integrated.fontSize": 13,
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.iconTheme": "vscode-great-icons",
   "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "vscode-great-icons",
   "git.autofetch": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -24,28 +23,61 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/node_modules": true,
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true,
-    "**/__pycache__": true
+    "**/__pycache__": true,
+    "**/node_modules": true
   },
-  "todo-tree.tree.showScanModeButton": false,
-  "go.toolsManagement.autoUpdate": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/synhavg/.vscode-server/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.format.enabled": false,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "cSpell.userWords": [
+    "Mgnl",
+    "Nautile",
+    "optinf",
+    "reakit",
+    "subcomponents",
+    "Submenu",
+    "SVGR",
+    "Timesheet",
+    "Timesheets"
+  ]
 }
