@@ -7,10 +7,10 @@ git pull origin main
 # Choose config depending on OS
 if [ $(uname -s) == Darwin ]; then
     CONFIG="config/macos.yaml"
-elif [ $(uname -r) == "*WSL2" ]; then
+elif [ -n $WSL_DISTRO_NAME ]; then
     CONFIG="config/wsl.yaml"
 else
-    CONFIG="config/linux.yam"
+    CONFIG="config/linux.yaml"
 fi
 
 DOTBOT_DIR="dotbot"

@@ -1,3 +1,10 @@
+- shell:
+    - command: sudo dnf update -y
+      description: Update all packages
+    - command: sudo dnf install zsh bat htop tree
+      description: Install packages
+    - command: 'if [ -z $ZSH ]; then sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi'
+      description: Install Oh My Zsh
 - clean: []
 - link:
     ~/.zshrc:
@@ -12,7 +19,7 @@
 - shell:
     - command: git submodule sync --recursive
       description: Synchronize Git submodules
-    - command: chsh -s /bin/zsh
+    - command: chsh -s /usr/bin/zsh
       description: Change default shell to zsh
-    - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
+    - command: xargs -n 1 code --force --install-extension < vscodium/extensions
       description: Install VSCodium dependencies

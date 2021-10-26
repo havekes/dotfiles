@@ -1,8 +1,6 @@
 - clean: []
 - link:
-    '%USERPROFILE%\AppData\Roaming\VSCodium\User\settings.json':
+    '%USERPROFILE%\AppData\Roaming\Code\User\settings.json':
       path: vscodium/settings.json
       force: true
-    '%USERPROFILE%\AppData\Roaming\VSCodium':
-      path: vscodium/product.json
-      force: true
+
