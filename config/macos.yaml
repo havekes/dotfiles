@@ -18,6 +18,9 @@
     '~/Library/Application Support/VSCodium/product.json':
       path: vscodium/product.json
       force: true
+    '~/Library/Preferences/com.googlecode.iterm2.plist':
+      path: macos/com.googlecode.iterm2.plist
+      force: true
 - shell:
     - command: git submodule sync --recursive
       description: Synchronize Git submodules
@@ -29,3 +32,5 @@
       description: Install go packages
     - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
       description: Install VSCodium dependencies
+    - command: gem install docker-sync
+      description: Install docker-sync
