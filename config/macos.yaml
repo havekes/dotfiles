@@ -1,6 +1,10 @@
 - shell:
     - command: 'if [ -z $ZSH ]; then sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi'
       description: Install Oh My Zsh
+    - command: chsh -s /bin/zsh
+      description: Change default shell to zsh
+    - command: cd brew; brew bundle
+      description: Install packages from Brewfile
 - clean: []
 - link:
     ~/.zshrc:
@@ -24,10 +28,6 @@
 - shell:
     - command: git submodule sync --recursive
       description: Synchronize Git submodules
-    - command: chsh -s /bin/zsh
-      description: Change default shell to zsh
-    - command: cd brew; brew bundle
-      description: Install packages from Brewfile
     - command: xargs -n 1 go get < go/packages
       description: Install go packages
     - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
