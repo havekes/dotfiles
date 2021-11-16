@@ -10,12 +10,12 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
+  "editor.rulers": [120],
   "workbench.editor.untitled.hint": "hidden",
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "vscode-great-icons",
   "git.autofetch": true,
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "files.trimTrailingWhitespace": true,
   "files.exclude": {
     "**/.git": true,
@@ -56,6 +56,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "eslint.validate": ["javascript", "typescript", "vue"],
   "redhat.telemetry.enabled": false,
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/synhavg/.vscode-server/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "java.format.enabled": false,
@@ -70,6 +71,11 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "cSpell.userWords": [
+    "bson",
+    "glog",
+    "godotenv",
+    "JWKS",
+    "jwtauth",
     "Mgnl",
     "Nautile",
     "optinf",
