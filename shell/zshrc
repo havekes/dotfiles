@@ -22,24 +22,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
 # GO
 export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin
-
-# Python
-export WORKON_HOME=~/.virtualenvs
-export PROJECT_HOME=~/dev/
-VIRTUALENVWRAPPER_PYTHON=$(which python3)
-source /usr/local/bin/virtualenvwrapper.sh
-
-# Node
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-
-# PHP
-export PATH="/usr/local/opt/php/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # docker-sync
 if which ruby >/dev/null && which gem >/dev/null; then
   PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
-

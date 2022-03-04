@@ -2,7 +2,7 @@
 
 ## Usage on macOS
 
-Just run the install script.
+Just run the install script twice.
 
 ```shell
 ./install.sh

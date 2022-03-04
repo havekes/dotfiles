@@ -1,11 +1,16 @@
 - shell:
-    - command: 'if [ -z $ZSH ]; then sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi'
+    - command: 'rm -rf ~/.oh-my-zsh; sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
       description: Install Oh My Zsh
-    - command: chsh -s /bin/zsh
+      stdour: true
+      stderr: true
+    - command: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+      description: Install Homebrew
+      stdour: true
+      stderr: true
+    - command: sudo chsh -s /bin/zsh
       description: Change default shell to zsh
-    - command: cd brew; brew bundle
-      description: Install packages from Brewfile
-- clean: []
+      stdour: true
+      stderr: true
 - link:
     ~/.zshrc:
       path: shell/zshrc
@@ -16,21 +21,32 @@
     ~/.gitconfig:
       path: git/.gitconfig
       force: true
-    '~/Library/Application Support/VSCodium/User/settings.json':
+    '~/Library/Application Support/Code/User/settings.json':
       path: vscodium/settings.json
       force: true
-    '~/Library/Application Support/VSCodium/product.json':
-      path: vscodium/product.json
-      force: true
-    '~/Library/Preferences/com.googlecode.iterm2.plist':
-      path: macos/com.googlecode.iterm2.plist
-      force: true
+    # '~/Library/Application Support/Code/product.json':
+    #   path: vscodium/product.json
+    #   force: true
 - shell:
+    - command: ./macos/defaults.sh
+      description: Configure macOS defaults
+    - command: cd brew; /opt/homebrew/bin/brew bundle
+      description: Install packages from Brewfile
+      stdour: true
+      stderr: true
     - command: git submodule sync --recursive
       description: Synchronize Git submodules
-    - command: xargs -n 1 go get < go/packages
+      stdour: true
+      stderr: true
+    - command: xargs -n 1 /opt/homebrew/bin/go install < go/packages
       description: Install go packages
-    - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
+      stdour: true
+      stderr: true
+    - command: xargs -n 1 code --force --install-extension < vscodium/extensions
       description: Install VSCodium dependencies
-    - command: gem install docker-sync
+      stdour: true
+      stderr: true
+    - command: sudo gem install docker-sync
       description: Install docker-sync
+      stdour: true
+      stderr: true

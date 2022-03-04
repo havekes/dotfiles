@@ -1,3 +1,4 @@
-[user]
-	name = Greg Havekes
-	email = 883845+havekes@users.noreply.github.com
+[pull]
+	rebase = true
+[fetch]
+	prune = true
