@@ -16,7 +16,10 @@ ZSH_THEME="greg"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aliases
+  brew
   git
+  laravel
   yarn
 )
 
@@ -24,12 +27,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 # GO
 export GOPATH=~/go
 export PATH="$GOPATH/bin:$PATH"
 
-# docker-sync
-if which ruby >/dev/null && which gem >/dev/null; then
-  PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
+# Python
+alias python="python3"
+
