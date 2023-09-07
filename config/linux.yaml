@@ -1,29 +1,12 @@
-- shell:
-    - command: 'if [ -z $ZSH ]; then sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi'
-      description: Install Oh My Zsh
 - clean: []
 - link:
-    ~/.zshrc:
-      path: shell/zshrc
-      force: true
-    ~/.oh-my-zsh/themes/greg.zsh-theme:
-      path: shell/greg.zsh-theme
-      force: true
     ~/.gitconfig:
       path: git/.gitconfig
-      force: true
-    ~/.config/VSCodium/User/settings.json:
-      path: vscodium/settings.json
-      force: true
-    ~/.config/VSCodium/product.json:
-      path: vscodium/product.json
       force: true
 - shell:
     - command: git submodule sync --recursive
       description: Synchronize Git submodules
     - command: chsh -s /bin/zsh
       description: Change default shell to zsh
-    - command: xargs -n 1 go get < go/packages
+    - command: xargs -n 1 sudo pacman -S < pacman/packages
       description: Install go packages
-    - command: xargs -n 1 codium --force --install-extension < vscodium/extensions
-      description: Install VSCodium dependencies

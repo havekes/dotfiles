@@ -2,3 +2,6 @@
 	rebase = true
 [fetch]
 	prune = true
+[user]
+	email = 883845+havekes@users.noreply.github.com
+	name = Greg Havekes
