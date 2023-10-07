@@ -24,6 +24,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Git
+alias gsap="git config user.name --replace-all 'Greg Havekes'; git config user.email --replace-all '883845+havekes@users.noreply.github.com'"
+
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
